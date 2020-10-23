@@ -13,11 +13,13 @@ if($cek > 0){
         $_SESSION['id'] = $data['id'];
 		$_SESSION['username'] = $username;
 		$_SESSION['id_level'] = 1;
+		$_SESSION['status']="Log in succesfull";
 		header("location:../employee/index.php");
 	}else if($data['id_level']==2){
 		$_SESSION['id'] = $data['id'];
 		$_SESSION['username'] = $username;
 		$_SESSION['id_level'] = 2;
+		$_SESSION['status']="Log in succesfull";
 		header("location:../item/index.php");
 	}else{
 		echo "ID level tidak ditemukan";

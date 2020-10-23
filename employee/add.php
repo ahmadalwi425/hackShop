@@ -17,7 +17,7 @@
             <form action="store.php" method="post" class="form-horizontal col-md-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <center>Log-In</center>
+                        <center>Add New Employee</center>
                     </div>
                     <div class="panel-body">
                         <div class="form-group">

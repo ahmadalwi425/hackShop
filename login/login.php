@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log-In</title>
-    <link rel="stylesheet" href="../asset/css/bootstrap.css">
-    <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
-    <script src="../asset/js/bootstrap.js"></script>
-    <script src="../asset/js/bootstrap.min.js"></script>
+    <?php
+    include "../asset/tool.php";
+    ?>
 </head>
 <body>
     <div class="container">
