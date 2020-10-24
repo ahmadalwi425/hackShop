@@ -10,8 +10,12 @@ $price = $_POST['price'];
 
 move_uploaded_file($_FILES['image']['tmp_name'], "image/".$_FILES['image']['name']);
 
-mysqli_query($conn,"update item set name='$name', imgname='$imgname', description='$description',price='$price' where id='$id'");
-
+$res=mysqli_query($conn,"update item set name='$name', imgname='$imgname', description='$description',price='$price' where id='$id'");
+if($res){
+    $_SESSION['status']="Item data has edited";
+}else{
+    $_SESSION['danger']="edit data failed";
+}
 header("location:index.php");
 
 ?>

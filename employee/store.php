@@ -8,7 +8,12 @@ $password = md5($_POST['password']);
 
 
 
-mysqli_query($conn,"insert into user values('','$username','$password','$gender','$id_level')");
+$res=mysqli_query($conn,"insert into user values('','$username','$password','$gender','$id_level')");
+if($res){
+    $_SESSION['status']="new employee has added";
+}else{
+    $_SESSION['danger']="insert data failed";
+}
 
 header("location:index.php");
 

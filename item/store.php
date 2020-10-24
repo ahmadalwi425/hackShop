@@ -9,8 +9,12 @@ $price = $_POST['price'];
 
 move_uploaded_file($_FILES['image']['tmp_name'], "image/".$_FILES['image']['name']);
 
-mysqli_query($conn,"insert into item values('','$id_user','$name','$description','$imgname','$price')");
-
+$res=mysqli_query($conn,"insert into item values('','$id_user','$name','$description','$imgname','$price')");
+if($res){
+    $_SESSION['status']="new item has added";
+}else{
+    $_SESSION['danger']="insert data failed";
+}
 header("location:index.php");
 
 ?>
