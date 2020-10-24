@@ -3,6 +3,7 @@ session_start();
 include '../connect/connection.php';
 echo '<link rel="stylesheet" href="../asset/css/bootstrap.css">
 <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
+<script src="../asset/js/jquery-3.5.1.slim.min.js"></script>
 <script src="../asset/js/bootstrap.js"></script>
 <script src="../asset/js/bootstrap.min.js"></script>';
 if(isset($_SESSION['id'])){
@@ -63,9 +64,11 @@ if(isset($_SESSION['id'])){
 if(isset($_SESSION['status'])){
     ?>
     <div class="container">
-        <div class="alert alert-success alert-dismissible">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Success!</strong> <?php echo $_SESSION['status']?>
+        <div class="alert alert-success alert-dismissible" role="alert">            
+            <strong>Success!</strong> <?php echo $_SESSION['status']?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>        
         </div>
     </div>
     
@@ -74,9 +77,11 @@ if(isset($_SESSION['status'])){
 }else if(isset($_SESSION['danger'])){
     ?>
     <div class="container">
-        <div class="alert alert-danger alert-dismissible">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Oops! </strong> <?php echo $_SESSION['status']?>
+        <div class="alert alert-danger alert-dismissible">    
+            <strong>Oops! </strong> <?php echo $_SESSION['status']?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>   
         </div>
     </div>
     
@@ -87,8 +92,10 @@ if(isset($_SESSION['logout'])){
     ?>
     <div class="container">
         <div class="alert alert-warning alert-dismissible">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Success!</strong> <?php echo $_SESSION['logout']?>
+            <strong>Success!</strong> <?php echo $_SESSION['logout']?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>           
         </div>
     </div>
     
