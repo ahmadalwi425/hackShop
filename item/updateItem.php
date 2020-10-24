@@ -1,6 +1,9 @@
 <?php 
 include "../asset/tool.php";
-
+if(isset($_SESSION['id_level'])){
+    $_SESSION['danger']="You not have access to visit that site";
+    header("Location:../item/index.php");
+}
 $id = $_POST['id'];
 $id_user = $_POST['id_user'];
 $name = $_POST['name'];

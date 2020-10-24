@@ -64,7 +64,7 @@ if(isset($_SESSION['id'])){
 if(isset($_SESSION['status'])){
     ?>
     <div class="container">
-        <div class="alert alert-success alert-dismissible" role="alert">            
+        <div class="alert alert-success alert-dismissible  fade in" role="alert">            
             <strong>Success!</strong> <?php echo $_SESSION['status']?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -77,8 +77,8 @@ if(isset($_SESSION['status'])){
 }else if(isset($_SESSION['danger'])){
     ?>
     <div class="container">
-        <div class="alert alert-danger alert-dismissible">    
-            <strong>Oops! </strong> <?php echo $_SESSION['status']?>
+        <div class="alert alert-danger alert-dismissible  fade in">    
+            <strong>Oops! </strong> <?php echo $_SESSION['danger']?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>   
@@ -91,7 +91,7 @@ if(isset($_SESSION['status'])){
 if(isset($_SESSION['logout'])){
     ?>
     <div class="container">
-        <div class="alert alert-warning alert-dismissible">
+        <div class="alert alert-warning alert-dismissible  fade in">
             <strong>Success!</strong> <?php echo $_SESSION['logout']?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>

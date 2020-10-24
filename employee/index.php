@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <?php
+    include "title.php";
     include "../asset/tool.php";
+    if($sil!=1){
+        $_SESSION['danger']="You not have access to visit that site";
+        header("Location:../item/index.php");
+    }
     ?>
 </head>
 <body>

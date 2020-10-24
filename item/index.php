@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item</title>
     <?php
+    include "title.php";
     include '../asset/tool.php';
     ?>
 </head>
