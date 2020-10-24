@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <?php
+    include "title.php";
     include "../asset/tool.php";
     $id = $_GET['id'];
     $data = mysqli_query($conn,"select * from user where id='$id'");
     $result = mysqli_fetch_array($data);
+    if($sil!=1){
+        $_SESSION['danger']="You not have access to visit that site";
+        header("Location:../item/index.php");
+    }
     ?>
 </head>
 <body>

@@ -25,6 +25,14 @@ if($cek > 0){
 		echo "ID level tidak ditemukan";
     }
 }else{
-	echo "Username with the same Password is not found";
+	$un=mysqli_query($conn,"select * from user where username='$username'");
+	$cek2 = mysqli_num_rows($un);
+	if($cek2>0){
+		$_SESSION['danger']="Your password is wrong";
+		header("location:login.php");
+	}else{
+		$_SESSION['danger']="Username not found";
+		header("location:login.php");
+	}
 }
 ?>
