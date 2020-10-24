@@ -3,6 +3,7 @@ session_start();
 include '../connect/connection.php';
 echo '<link rel="stylesheet" href="../asset/css/bootstrap.css">
 <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
+<link rel="stylesheet" href="../asset/css/style.css">
 <script src="../asset/js/jquery-3.5.1.slim.min.js"></script>
 <script src="../asset/js/bootstrap.js"></script>
 <script src="../asset/js/bootstrap.min.js"></script>';
@@ -18,14 +19,13 @@ if(isset($_SESSION['id'])){
                 <a class="navbar-brand" href="#">Hack Shop</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="../employee/index.php">User</a></li>
-                <li><a href="../item/index.php">Item</a></li>
-                <li><a href="../item/userItem.php">Your Item</a></li>
-                <li><a href="../profile/index.php">Your Profile</a></li>
-                <li class="active pull-right"><a href="../login/logout.php">Logout</a></li>
+                <li class = "nav-link"><a href="../employee/index.php">User</a></li>
+                <li class = "nav-link"><a  href="../item/index.php">Item</a></li>
+                <li class = "nav-link"><a href="../item/userItem.php">Your Item</a></li>
+                <li class = "nav-link"><a href="../profile/index.php">Your Profile</a></li>
             </ul>
             <ul class="nav navbar-nav pull-right">
-                <li class="active pull-right"><a href="../login/logout.php">Logout</a></li>
+                <li class="pull-right"><a href="../login/logout.php">Logout</a></li>
             </ul>
             </div>
         </nav>';
@@ -37,12 +37,12 @@ if(isset($_SESSION['id'])){
                 <a class="navbar-brand" href="#">Hack Shop</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="../item/index.php">Item</a></li>
-                <li><a href="../item/userItem.php">Your Item</a></li>
-                <li><a href="../profile/index.php">Your Profile</a></li>
+                <li class = "nav-link"><a href="../item/index.php">Item</a></li>
+                <li class = "nav-link"><a href="../item/userItem.php">Your Item</a></li>
+                <li class = "nav-link"><a href="../profile/index.php">Your Profile</a></li>
             </ul>
             <ul class="nav navbar-nav pull-right">
-                <li class="active pull-right"><a href="../login/logout.php">Logout</a></li>
+                <li class="pull-right"><a href="../login/logout.php">Logout</a></li>
             </ul>
             </div>
         </nav>';
@@ -55,7 +55,7 @@ if(isset($_SESSION['id'])){
             <a class="navbar-brand" href="../login/login.php">Hack Shop</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="../item/index.php">Item</a></li>
+            <li  class = "nav-link "><a href="../item/index.php">Item</a></li>
             </ul>
         </div>
     </nav>';
